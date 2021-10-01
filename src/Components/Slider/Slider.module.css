@@ -1,0 +1,19 @@
+.item {
+    height: 600px;
+}
+@media (max-width: 800px) {
+    .item {
+        max-height: 450px;
+    }
+}
+@media (max-width: 600px) {
+    .item {
+        max-height: 300px;
+    }
+}
+
+@media (min-width: 1500px){
+    .item {
+        height: 900px;
+    }
+}
