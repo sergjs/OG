@@ -1,21 +1,23 @@
-import React, { useState } from "react";
-import Lightbox from "react-image-lightbox";
+import React, { useState, useCallback } from "react";
 import wk from './Works.module.css';
-import LightboxComponent from "./LightboxComponent";
-import { propTypes } from "react-bootstrap/esm/Image";
+import Viewer from "./Viewer";
 
-import ImgsViewer from "react-images-viewer";
 
-function importAll(r) {
-    let images = [];
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-}
-const images = importAll(require.context('../img/woks/'));
+const Works = ({ images, qulityImages }) => {
 
-const Works = () => {
-    let [number, correctNumber] = useState(0);
-    let [isOpen, setIsOpen] = useState(false);
+    const [currentImage, setCurrentImage] = useState(0);
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+
+    const openImageViewer = useCallback((index) => {
+        setCurrentImage(index);
+        setIsViewerOpen(true);
+    }, []);
+
+    const closeImageViewer = () => {
+        setCurrentImage(0);
+        setIsViewerOpen(false);
+    };
 
     let urlPic = [];
     for (let key in images) {
@@ -26,19 +28,23 @@ const Works = () => {
         }
     }
     return <div className={wk.container}>
-        {urlPic.map(photo =>
+        {urlPic.map((photo, index) =>
             <div className={wk.ibg}
-                style={{ backgroundImage: `url(${photo})` }} onClick={() => { correctNumber = photo; console.log(photo); setIsOpen = true }}>
+                style={{ backgroundImage: `url(${photo})` }} onClick={() => openImageViewer(index) }
+                key={ index }
+                >
             </div>
         )}
-       
-       <ImgsViewer
-    imgs={[
-      { src: '../images/photo-1.jpg' },
-    ]}
-    isOpen={isOpen}
-  />
+    {isViewerOpen &&  (
+        <Viewer 
+        qulityImages= {qulityImages}
+        urlPic = {urlPic}
+        currentImage = {currentImage}
+        closeImageViewer = {closeImageViewer}
+        />
+    )}
     </div >
 }
 
 export default Works;
+

@@ -1,33 +1,43 @@
 import React from 'react';
-import Profile from './Profile';
 import { connect } from 'react-redux';
-import { getStatus, profile, updateStatus, savePhoto, saveProfile } from "../../redux/profilePageReducer";
+import { getPhotos, getQualityPhotos } from "../../redux/app-reducer";
 import { withRouter } from "react-router-dom";
-import { withAuthRedirect } from '../../HOC/withAuthRedirect';
 import { compose } from 'redux';
+import Works from './Works';
 
 class WorksContainer extends React.Component {
+
+    componentDidMount() {
+        this.props.getPhotos();
+        this.props.getQualityPhotos()
+    }
+
+    componentDidUpdate(prevProps) {
+            if (this.props.getPhotos != prevProps.getPhotos) {
+        this.props.getPhotos();
+        this.props.getQualityPhotos()
+    }
+}
 
     render() {
         return (
             <Works {...this.props}
-                // isOwner={!this.props.match.params.iserId}
-                // userProfile={this.props.userProfile}
-                // status={this.props.status}
-                // updateStatus={this.props.updateStatus}
-                // savePhoto={this.props.savePhoto}
+            images = {this.props.images}
+            qulityImages= {this.props.qulityImages}
             />
         );
     };
+    
 }
 
 let mapStateToProps = (state) => {
     return {
-        appreducer: state.app.photos
+        images: state.app.photos,
+        qulityImages: state.app.qualityPhoto
     }
 };
 
-export default compose(connect(mapStateToProps, { profile, getStatus, updateStatus, savePhoto, saveProfile }),
-    withRouter,
-    withAuthRedirect,
-)(ProfileContainer);
+export default compose(connect(mapStateToProps, { getPhotos, getQualityPhotos }),
+    withRouter)(WorksContainer);
+
+

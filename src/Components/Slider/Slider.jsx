@@ -11,7 +11,7 @@ const Slider = () => {
         <Carousel.Item className={st.item} interval = {3000}>
             <img src={pic2}
                 alt="First slide"
-                className="d-block w-100"
+                className={st.blog_foto}
                 />
             <Carousel.Caption>
                 <h3>New messageNew messageNew message</h3>
@@ -19,7 +19,7 @@ const Slider = () => {
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item  className={st.item} interval = {3000}>
-            <img className="d-block w-100" 
+            <img  className={st.blog_foto}
             src={pic3}
                 alt="Second slide"
                   />
@@ -30,7 +30,7 @@ const Slider = () => {
         </Carousel.Item>
         <Carousel.Item  className={st.item} interval = {3000}>
             <img 
-            className="d-block w-100"
+             className={st.blog_foto}
             src={pic1}
                 alt="third slide"
                  />
