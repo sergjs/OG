@@ -25,3 +25,24 @@
         height: 200px;
     }
 }
+.button_next{
+    display: block;
+    margin: 25px auto 10px auto; 
+    border-radius: 25px;
+    background:  #27c9bb;
+    border: 1px solid #30d5c8
+}
+.button_next p {
+    color: white;
+    margin: 5px 35px;
+}
+.button_next:hover{
+    background:  #86e9e1;
+}
+.text_viewer {
+    z-index: 20;
+
+    color: white;
+    margin: 0 auto;
+    background-color: white;
+}

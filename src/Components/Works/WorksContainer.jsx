@@ -8,14 +8,15 @@ import Works from './Works';
 class WorksContainer extends React.Component {
 
     componentDidMount() {
+        // let number = this.props.match.params
         this.props.getPhotos();
-        this.props.getQualityPhotos()
+        
+        this.props.getQualityPhotos();
     }
 
     componentDidUpdate(prevProps) {
             if (this.props.getPhotos != prevProps.getPhotos) {
         this.props.getPhotos();
-        this.props.getQualityPhotos()
     }
 }
 

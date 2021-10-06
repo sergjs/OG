@@ -7,6 +7,7 @@ import { HashRouter, Route } from 'react-router-dom';
 import { connect, Provider } from 'react-redux';
 import store from './redux/redux-store';
 import WorksContainer from "./Components/Works/WorksContainer";
+import Footer from './Components/Footer/Footer' ;
 
 const Viewer = React.lazy(() => import('./Components/Works/Viewer'));
 
@@ -18,11 +19,12 @@ class App extends React.Component {
         <Slider />
         <About />
         <WorksContainer />
-        <Route path='/Viewer' render={() => {
+        <Route path='Viewer/' render={() => {
           return <React.Suspense fallback={<div>Загрузка...</div>}>
             <Viewer />
           </React.Suspense>
         }} />
+        <Footer />
       </div>
     );
   }
