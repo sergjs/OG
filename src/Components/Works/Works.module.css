@@ -39,10 +39,15 @@
 .button_next:hover{
     background:  #86e9e1;
 }
+.wrapper{
+    position: relative;
+}
 .text_viewer {
     z-index: 20;
-
+    position: fixed;
     color: white;
-    margin: 0 auto;
-    background-color: white;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0%;
 }

@@ -13,7 +13,7 @@ const Viewer = ({ currentImage, closeImageViewer, qulityImages }) => {
         }
     }
 
-    return <div>
+    return <div className={wk.wrapper}>
             <ImageViewer
                 src={urlPic}
                 currentIndex={currentImage}

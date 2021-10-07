@@ -59,9 +59,23 @@
         width: 160%;
     }
 }
+.wrapper {
+    position: relative;
+}
 
-
-
+.text_viewer {
+    z-index: 20;
+    text-align: center;
+    color: white;
+}
+.button_next {
+    position: absolute;
+    z-index: 20;
+    bottom: 11%;
+    left: 0;
+    right: 0
+    
+}
 
 
 
