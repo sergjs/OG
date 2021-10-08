@@ -1,23 +1,10 @@
- /* .App {
-  display: grid;
-  grid-template-areas: 
-  'head '
-  'carousel'
-  'text'
-  'works'
-  'footer' ;
-} 
-.container {
-  padding: 0 15px;
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+
+body {
+  margin: 0;
+  font-family: 'Roboto' !important; 
 }
 
-.title {
-  font-weight: 700;
-  font-size: 2.5em;
-  text-align: center;
-  margin: 1em 0;
+code {
+  font-family: 'Roboto';
 }
-
-.slider {
-  margin: 0 -15px;
-} */

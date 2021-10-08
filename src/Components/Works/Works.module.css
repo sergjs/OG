@@ -27,7 +27,7 @@
 }
 .button_next{
     display: block;
-    margin: 25px auto 10px auto; 
+    margin: 25px auto 25px auto; 
     border-radius: 25px;
     background:  #27c9bb;
     border: 1px solid #30d5c8
@@ -41,6 +41,7 @@
 }
 .wrapper{
     position: relative;
+    z-index: 20;
 }
 .text_viewer {
     z-index: 20;

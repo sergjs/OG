@@ -8,16 +8,17 @@ import Logo from '../img/MY_Logo.png';
 
 const Footer = () => {
     return <div className={ft.wrapper}>
-        <img src={Logo} alt="" className={ft.logo} />
         <div className={ft.container}>
 
             <div>
-                <a href="https://api.whatsapp.com/qr/MSBX42KCAHXUO1" target="_blank">
+                <a href="https://wa.me/+79117885659" target="_blank">
+                    {/* https://api.whatsapp.com/qr/MSBX42KCAHXUO1 */}
+
                     <ReactSVG src={whatsapp} className={ft.photo} data-title="whatsapp" />
                 </a>
             </div>
             <div>
-                <a href="https://www.instagram.com/olgagorbunova_3dvis/" target="_blank">
+                <a href="https://www.instagram.com/olgagorbunova_3dviz/" target="_blank">
                     <ReactSVG src={insta} className={ft.photo} data-title="instagram" />
                 </a>
             </div>

@@ -29,7 +29,7 @@ const Slider = () => {
                 />
             </Carousel.Item>
         </Carousel>
-        <div className={st.button_next}>
+        <div className={st.text_container}>
             <h2 className={st.text_viewer}> <b>3D визуализация <br />от Ольги Горбуновой</b></h2>
         </div>
     </div>

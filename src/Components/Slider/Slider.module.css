@@ -64,11 +64,11 @@
 }
 
 .text_viewer {
-    z-index: 20;
     text-align: center;
     color: white;
+    cursor: default;
 }
-.button_next {
+.text_container {
     position: absolute;
     z-index: 20;
     bottom: 11%;

@@ -12,6 +12,7 @@ const Viewer = ({ currentImage, closeImageViewer, qulityImages }) => {
             urlPic.push(array[newKey]);
         }
     }
+    
 
     return <div className={wk.wrapper}>
             <ImageViewer
@@ -21,8 +22,9 @@ const Viewer = ({ currentImage, closeImageViewer, qulityImages }) => {
                 closeOnClickOutside={true}
                 onClose={closeImageViewer}
             />
+            
             <div className={wk.text_viewer}>
-            <p > Выполнено для Elski design</p>
+            <p > Выполнено для {urlPic[currentImage].toString().split('.')[1] }</p>
             </div>
     </div>
 }
