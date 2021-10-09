@@ -1,11 +1,41 @@
-
+/* 
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 
 body {
   margin: 0;
-  font-family: 'Roboto' !important;
+  font-family: 'Roboto';
 }
 
 code {
-  font-family: 'Roboto' !important;
+  font-family: 'Roboto';
+} */
+/* 
+body {
+  margin: 0;
+  font-family: 'Golca' !important;
+}
+
+code {
+  font-family: 'Golca' !important;
+}
+@font-face {
+  font-family: Golca !important; 
+  src: url(./Pepper\ Type\ -\ Golca-ExtraLightItalic.otf); 
+ } */
+
+ @font-face {
+  font-family: "AcherusFeral";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("AcherusFeral"),
+       /* Если не получилось, загрузит woff2 */
+       url(./Horizon\ Type\ -\ AcherusFeral-Bold.otf) format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url(./Horizon\ Type\ -\ AcherusFeral-Bold.otf) format("woff");
+}
+
+/* Теперь можно использовать шрифт */
+body {
+  font-family: "AcherusFeral", "AcherusFeral", sans-serif !important;
 }
