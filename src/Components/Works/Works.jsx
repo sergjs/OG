@@ -6,8 +6,8 @@ const Works = ({ images, qulityImages }) => {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [isViewerOpen, setIsViewerOpen] = useState(false);
-    const [newPortion, setNewPortion] = useState(16)
-    const [isButton, setIsButton] = useState(true)
+    const [newPortion, setNewPortion] = useState(16);
+    const [isButton, setIsButton] = useState(true);
 
     const openImageViewer = useCallback((index) => {
         setCurrentImage(index);
