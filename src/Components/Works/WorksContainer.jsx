@@ -26,7 +26,6 @@ class WorksContainer extends React.Component {
             />
         );
     };
-
 }
 
 let mapStateToProps = (state) => {

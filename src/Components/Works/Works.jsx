@@ -19,13 +19,12 @@ const Works = ({ images, qulityImages }) => {
         setIsViewerOpen(false);
     };
 
-
     const addNewPortion = () => {
         setNewPortion(newPortion + 16);
         if (urlPic.length - 16 < newPortion) {
             setIsButton(false);
         }
-    }
+    };
 
     let urlPic = [];
     for (let key in images) {
@@ -38,12 +37,10 @@ const Works = ({ images, qulityImages }) => {
     return <div>
         <div className={wk.container}>
             {urlPic.slice(0, newPortion).map((photo, index) =>
-
                 <div className={wk.ibg}
                     style={{ backgroundImage: `url(${photo})` }} onClick={() => openImageViewer(index)}
                     key={index}   >
                 </div>
-
             )}
             {isViewerOpen && (
                 <Viewer
@@ -51,15 +48,11 @@ const Works = ({ images, qulityImages }) => {
                     urlPic={urlPic}
                     currentImage={currentImage}
                     closeImageViewer={closeImageViewer}
-
                 />
             )}
-            
         </div >
         {isButton &&
-            <button className={wk.button_next} onClick={() => addNewPortion()}
-            ><p>Смотреть больше</p></button>
-        }
+            <button className={wk.button_next} onClick={() => addNewPortion()}><p>Смотреть больше</p></button>}
     </div>
 }
 
